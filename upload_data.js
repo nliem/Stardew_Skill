@@ -1,6 +1,6 @@
-var $ = jQuery = require('jquery');  //import jquery in nodejs
-var fs = require('fs');  //import fs
-require('./jquery.csv.js');  //this is a file that i library that I found to change CSV string into array
+var $ = jQuery = require('jquery'); 
+var fs = require('fs'); 
+require('./jquery.csv.js');  
 var AWS = require('aws-sdk');
 var inputFile = "stardew.csv"
  
