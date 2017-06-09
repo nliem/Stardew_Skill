@@ -90,14 +90,14 @@ function handleBirthdayIntent(intent, session, callback){
 	let speechOutput = '';
 
 	if (npcSlot){
-		const NPC = npcSlot.value;
+		var NPC = npcSlot.value;
 		var birthday = '';
 		//ensure that possessive/'the' version of NPC's name is properly formatted
 		
 		var possesive = "\'s";
 		if(NPC.indexOf(possesive) !== -1){
 			//NPC string is possessive
-			NPC = NPC.substring(0, (str.length-2));
+			NPC = NPC.substring(0, (NPC.length-2));
 		}
 
 		var the = "The";
@@ -106,14 +106,16 @@ function handleBirthdayIntent(intent, session, callback){
 			NPC = NPC.substring(4);
 		}
 
+		console.log("NPC to Query: " + NPC);
+
 		var params = {
-			TableName : NPC_Data_Table;
+			TableName : NPC_Data_Table,
 			Key : {
 				"name" : NPC
 			}
 		};		
 		
-		mongodb.get(params, function(err, data){
+		dynamodb.get(params, function(err, data){
 			if(err){
 				console.error("Unable to fetch NPC item: ", JSON.stringify(err, null, 2));
 			} else{
