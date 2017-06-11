@@ -77,7 +77,7 @@ function handleBirthdayIntent(intent, session, callback){
 	const shouldEndSession = false;
 	let speechOutput = '';
 
-	if (npcSlot){
+	if (npcSlot.value){
 		var NPC = npcSlot.value;
 		var birthday = '';
 		var hadThe = false;
@@ -108,28 +108,34 @@ function handleBirthdayIntent(intent, session, callback){
 		dynamodb.get(params, function(err, data){
 			if(err){
 				console.error("Unable to fetch NPC item: ", JSON.stringify(err, null, 2));
+				speechOutput = "I can't recognize the NPC you are asking about. Please try again.";
+				repromptText = "Sorry, I didn't understand the NPC you are asking about. Try again.";
+				callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
 			} else{
 				console.log("GetItem succeeded: ", JSON.stringify(data, null, 2));
 				birthday = data.Item.birthday.toString();
 				console.log("Birthday Value: " + birthday);
+				console.log("TOEIJOWEIJWEOFIWEJ");
+				console.log("Post query Birthday Value: " + birthday);
+
+				if(hadThe){
+					speechOutput = "The ";
+				}
+				speechOutput += NPC + "\'s birthday is on " + birthday + ".";
+				repromptText = "You can ask me about other NPC's birthdays and gift preferences.";
+				callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
 			}
 		});
 
-		console.log("TOEIJOWEIJWEOFIWEJ");
-		console.log("Post query Birthday Value: " + birthday);
 
-		if(hadThe){
-			speechOutput = "The ";
-		}
-		speechOutput += NPC + "\'s birthday is on " + birthday + ".";
-		repromptText = "You can ask me about other NPC's birthdays and gift preferences.";
 
 	} else{
 		speechOutput = "I can't recognize the NPC you are asking about. Please try again.";
 		repromptText = "Sorry, I didn't understand the NPC you are asking about. Try again.";
+		callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
 	}
 
-	callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+	
 }
 
 function handleGiftIntent(intent, session, callback){
