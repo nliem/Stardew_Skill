@@ -106,7 +106,7 @@ function handleBirthdayIntent(intent, session, callback){
 		};		
 		
 		dynamodb.get(params, function(err, data){
-			if(err){
+			if(err || data.Item == null){
 				console.error("Unable to fetch NPC item: ", JSON.stringify(err, null, 2));
 				speechOutput = "I can't recognize the NPC you are asking about. Please try again.";
 				repromptText = "Sorry, I didn't understand the NPC you are asking about. Try again.";
