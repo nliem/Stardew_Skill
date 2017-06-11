@@ -7,25 +7,13 @@ Skill for accessing quick resources for Stardew Valley
 
 /*Helper which builds all of the responses*/
 
-var Clint = {
-	birthday : 'Winter 26',
-	love: ["Amethyst", "Aquamarine", "Artichoke Dip", "Emerald", "Fiddlehead Risotto", "Gold Bar", "Iridium Bar", "Jade", "Omni Geode", "Ruby", "Topaz", "Universal Loves"],
-	like: ["Copper Bar", "Iron Bar", "Universal Likes"]
-}
-
-var Emily = {
-	birthday: 'Spring 27',
-	love: ["Amethyst", "Aquamarine", "Cloth", "Emerald", "Jade", "Ruby", "Survival Burger", "Topaz", "Wool", "Universal Loves"],
-	like: ["Daffodil", "Quarts", "Universal Likes"]
-}
-
 var AWS = require("aws-sdk");
 
-AWS.config.update({
-	accessKeyId: 'AKIAJ5AMDOAVNDBRNWZQ', 
-	secretAccessKey: '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', 
-	region: "us-east-1"
-});
+AWS.config = new AWS.Config();
+
+AWS.config.accessKeyID = "AKIAJ5AMDOAVNDBRNWZQ";
+AWS.config.secretAccessKey = "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";
+AWS.config.region = "us-east-1";
 
 var dynamodb = new AWS.DynamoDB.DocumentClient();
 
@@ -92,8 +80,9 @@ function handleBirthdayIntent(intent, session, callback){
 	if (npcSlot){
 		var NPC = npcSlot.value;
 		var birthday = '';
-		//ensure that possessive/'the' version of NPC's name is properly formatted
+		var hadThe = false;
 		
+		//ensure that possessive/'the' version of NPC's name is properly formatted
 		var possesive = "\'s";
 		if(NPC.indexOf(possesive) !== -1){
 			//NPC string is possessive
@@ -104,6 +93,7 @@ function handleBirthdayIntent(intent, session, callback){
 		if(NPC.indexOf(the) !== -1){
 			//NPC string contains 'the'
 			NPC = NPC.substring(4);
+			hadThe = true;
 		}
 
 		console.log("NPC to Query: " + NPC);
@@ -120,20 +110,18 @@ function handleBirthdayIntent(intent, session, callback){
 				console.error("Unable to fetch NPC item: ", JSON.stringify(err, null, 2));
 			} else{
 				console.log("GetItem succeeded: ", JSON.stringify(data, null, 2));
-				//birthday = 
+				birthday = data.Item.birthday.toString();
+				console.log("Birthday Value: " + birthday);
 			}
 		});
 
-		/*
-		if(NPC === 'Clint' || NPC === 'Clint\'s'){
-			birthday = Clint.birthday;
-		} else if(NPC === 'Emily' || NPC === 'Emily\'s'){
-			birthday = Emily.birthday;
-		} else{
-			throw new Error('Invalid NPC for handleBirthdayIntent');
-		} */
+		console.log("TOEIJOWEIJWEOFIWEJ");
+		console.log("Post query Birthday Value: " + birthday);
 
-		speechOutput = NPC + " birthday is on " + birthday + ".";
+		if(hadThe){
+			speechOutput = "The ";
+		}
+		speechOutput += NPC + "\'s birthday is on " + birthday + ".";
 		repromptText = "You can ask me about other NPC's birthdays and gift preferences.";
 
 	} else{
