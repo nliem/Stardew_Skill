@@ -181,12 +181,12 @@ function handleGiftIntent(intent, session, callback){
 			console.log("Gift list for " + preference + " : " + giftsList);
 			var giftsPhrase = "";
 			for(var i = 0; i < giftsList.length; i++){
-				if(i === (gifts.length - 1)){
-					giftsPhrase += ', and ' + gifts[i];
+				if(i === (giftsList.length - 1)){
+					giftsPhrase += ', and ' + giftsList[i];
 				} else if (i === 0){
-					giftsPhrase += gifts[i];
+					giftsPhrase += giftsList[i];
 				} else{
-					giftsPhrase += ', ' + gifts[i];
+					giftsPhrase += ', ' + giftsList[i];
 				}
 			}
 
