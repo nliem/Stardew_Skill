@@ -1,15 +1,10 @@
 //Upload JSON file with NPC birthday/gift preferences to Stardew_NPC_Basic_Info Table
-var $ = jQuery = require('jquery');
 var fs = require('fs');
 var AWS = require('aws-sdk');
 var inputFile = 'NPC_Basic_Info.json';
 var tableName = 'Stardew_NPC_Basic_Info';
 
-AWS.config.update({
-	accessKeyId: 'AKIAJBQOQ6VGLIRJBSMA',
-	secretAccessKey: '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',
-	region: 'us-east-1'
-});
+AWS.config.loadFromPath('../config.json');
 
 var docClient = new AWS.DynamoDB.DocumentClient();
 
