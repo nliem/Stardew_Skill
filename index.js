@@ -12,7 +12,7 @@ var AWS = require("aws-sdk");
 
 var dynamodb = new AWS.DynamoDB.DocumentClient();
 
-var NPC_Data_Table = "Stardew_Data";
+var NPC_Basic_Info = "Stardew_NPC_Basic_Info";
 
 function buildSpeechletResponse(title, output, repromptText, shouldEndSession){
 	return{
@@ -41,6 +41,21 @@ function buildResponse(sessionAttributes, speechletResponse){
 		sessionAttributes,
 		response: speechletResponse
 	};
+}
+
+//Parses NPC slot value to return the base NPC value
+function processNPC(NPC){
+	var possessive = "\'s";
+	var the = "The";
+
+	if(NPC.indexOf(possessive) !== -1){
+		NPC = NPC.substring(0, (NPC.length-2));
+	}
+	if(NPC.indexOf(the) !== -1){
+		NPC = NPC.substring(4);
+	}
+
+	return NPC;
 }
 
 /*Functions to control the skill's behavior*/
@@ -73,23 +88,8 @@ function handleBirthdayIntent(intent, session, callback){
 	let speechOutput = '';
 
 	if (npcSlot.value){
-		var NPC = npcSlot.value;
+		var NPC = processNPC(npcSlot.value);
 		var birthday = '';
-		var hadThe = false;
-		
-		//ensure that possessive/'the' version of NPC's name is properly formatted
-		var possesive = "\'s";
-		if(NPC.indexOf(possesive) !== -1){
-			//NPC string is possessive
-			NPC = NPC.substring(0, (NPC.length-2));
-		}
-
-		var the = "The";
-		if(NPC.indexOf(the) !== -1){
-			//NPC string contains 'the'
-			NPC = NPC.substring(4);
-			hadThe = true;
-		}
 
 		console.log("NPC to Query: " + NPC);
 
@@ -113,7 +113,7 @@ function handleBirthdayIntent(intent, session, callback){
 				console.log("TOEIJOWEIJWEOFIWEJ");
 				console.log("Post query Birthday Value: " + birthday);
 
-				if(hadThe){
+				if(NPC === "Wizard" || NPC === "Dwarf"){
 					speechOutput = "The ";
 				}
 				speechOutput += NPC + "\'s birthday is on " + birthday + ".";

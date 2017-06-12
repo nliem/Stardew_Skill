@@ -1,0 +1,43 @@
+[
+	{
+		"item" : "Dinasaur Egg",
+		"obtained" : "A Dinasaur Egg is obtained from an Artifact Spot. It can also be laid by a Dinasaur once every 7 days.",
+		"giftable" : true,
+		"preference" : {
+			"Abigail" : "",
+			"Alex" : "",
+			"Caroline" : "",
+			"Clint" : "",
+			"Demetrius" : "",
+			"Dwarf" : "",
+			"Elliott" : "",
+			"Emily" : "",
+			"Evelyn" : "",
+			"George" : "",
+			"Gus" : "",
+			"Haley" : "",
+			"Harvey" : "",
+			"Jas" : "",
+			"Jodi" : "",
+			"Kent" : "",
+			"Krobus" : "",
+			"Leah" : "",
+			"Lewis" : "",
+			"Linus" : "",
+			"Marnie" : "",
+			"Maru" : "",
+			"Pam" : "",
+			"Penny" : "",
+			"Pierre" : "",
+			"Robin": "",
+			"Sam" : "",
+			"Sandy" : "",
+			"Sebastian" : "",
+			"Shane" : "",
+			"Vincent" : "",
+			"Willy" : "",
+			"Wizard" : ""
+		}
+	}
+
+]
