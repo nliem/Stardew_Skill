@@ -1,13 +1,13 @@
-var $ = jQuery = require('jquery'); 
-var fs = require('fs'); 
-require('./jquery.csv.js');  
+var $ = jQuery = require('jquery');  //import jquery in nodejs
+var fs = require('fs');  //import fs
+require('./jquery.csv.js');  //this is a file that i library that I found to change CSV string into array
 var AWS = require('aws-sdk');
 var inputFile = "stardew.csv"
  
 
 function populate_table(data){
 		
-	AWS.config.update({accessKeyId: 'AKIAJ5AMDOAVNDBRNWZQ', secretAccessKey: '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', region: "us-east-1"});
+	AWS.config.update({accessKeyId: 'AKIAI6FHDCN6637PUVNQ', secretAccessKey: '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', region: "us-east-1"});
 	var dynamodb = new AWS.DynamoDB.DocumentClient();
 
 	for(i=0;i<data.length;i++){
@@ -17,11 +17,12 @@ function populate_table(data){
 	        TableName: "Stardew_Data",
 	        Item: stardew_data
 	    };
+	    console.log("Adding NPC: " + manager.get_npc_name());
 		dynamodb.put(params, function(err, data) {
 		       if (err) {
-		           console.error("Unable to add npc",manager.get_npc_name(), ". Error JSON:", JSON.stringify(err, null, 2));
+		           console.error("Unable to add npc", ". Error JSON:", JSON.stringify(err, null, 2));
 		       } else {
-		           console.log("PutItem succeeded:", manager.get_npc_name());
+		           console.log("PutItem succeeded");
 		       }
 		});	    
 	}	
