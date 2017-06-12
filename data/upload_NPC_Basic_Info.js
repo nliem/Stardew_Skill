@@ -6,8 +6,8 @@ var inputFile = 'NPC_Basic_Info.json';
 var tableName = 'Stardew_NPC_Basic_Info';
 
 AWS.config.update({
-	accessKeyId: 'AKIAIBVC4TUV6EMBGYZQ',
-	secretAccessKey: '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',
+	accessKeyId: 'AKIAJBQOQ6VGLIRJBSMA',
+	secretAccessKey: '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',
 	region: 'us-east-1'
 });
 

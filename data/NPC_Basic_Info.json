@@ -1,7 +1,4 @@
-//NPCBasicInfo.JSON
-
 [
-	//Abigail
 	{
 		"name" : "Abigail",
 		"birthday" : "Fall 13",
@@ -45,7 +42,6 @@
 			"All Universal Hates except for Sugar"
 		]
 	},
-	//Alex
 	{
 		"name" : "Alex",
 		"birthday" : "Summer 13",
@@ -84,7 +80,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Caroline
 	{
 		"name" : "Caroline",
 		"birthday" : "Winter 7",
@@ -124,7 +119,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Clint
 	{
 		"name" : "Clint",
 		"birthday" : "Winter 26",
@@ -180,7 +174,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Demetrius
 	{
 		"name" : "Demetrius",
 		"birthday" : "Summer 19",
@@ -220,7 +213,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Dwarf
 	{
 		"name" : "Dwarf",
 		"birthday" : "Summer 22",
@@ -269,7 +261,6 @@
 			"All Universal Hates except for Dwarvish Items"
 		]
 	},
-	//Elliot
 	{
 		"name" : "Elliot",
 		"birthday" : "Fall 5",
@@ -317,7 +308,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Emily
 	{
 		"name" : "Emily",
 		"birthday" : "Spring 27",
@@ -371,7 +361,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Evelyn
 	{
 		"name" : "Evelyn",
 		"birthday" : "Winter 20",
@@ -426,7 +415,6 @@
 			"All Universal Hates"
 		]
 	},
-	//George
 	{
 		"name" : "George",
 		"birthday" : "Fall 24",
@@ -467,7 +455,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Gus
 	{
 		"name" : "Gus",
 		"birthday" : "Summer 8",
@@ -509,7 +496,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Haley
 	{
 		"name" : "Haley",
 		"birthday" : "Spring 14",
@@ -553,7 +539,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Harvey
 	{
 		"name" : "Harvey",
 		"birthday" : "Summer 4",
@@ -605,7 +590,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Jas
 	{
 		"name" : "Jas",
 		"birthday" : "Summer 4",
@@ -649,7 +633,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Jodi
 	{
 		"name" : "Jodi",
 		"birthday" : "Fall 11",
@@ -695,7 +678,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Kent
 	{
 		"name" : "Kent",
 		"birthday" : "Winter 1",
@@ -736,7 +718,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Krobus
 	{
 		"name" : "Krobus",
 		"birthday" : "Winter 1",
@@ -780,7 +761,6 @@
 			"All Universal Hates except for Void Mayonnaise"
 		]
 	},
-	//Leah
 	{
 		"name" : "Leah",
 		"birthday" : "Winter 23",
@@ -840,7 +820,6 @@
 			"All Universal Hates except for Seaweed"
 		]
 	},
-	//Lewis
 	{
 		"name" : "Lewis",
 		"birthday" : "Spring 7",
@@ -884,7 +863,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Linus
 	{
 		"name" : "Linus",
 		"birthday" : "Winter 3",
@@ -928,7 +906,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Marnie
 	{
 		"name" : "Marnie",
 		"birthday" : "Fall 18",
@@ -971,7 +948,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Maru
 	{
 		"name" : "Maru",
 		"birthday" : "Summer 10",
@@ -1027,7 +1003,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Pam
 	{
 		"name" : "Pam",
 		"birthday" : "Spring 18",
@@ -1073,7 +1048,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Penny
 	{
 		"name" : "Penny",
 		"birthday" : "Fall 2",
@@ -1131,7 +1105,6 @@
 			"All Universal Hates except for Poppy and Red Mushroom" 
 		]
 	},
-	//Pierre
 	{
 		"name" : "Pierre",
 		"birthday" : "Spring 26",
@@ -1175,7 +1148,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Robin
 	{
 		"name" : "Robin",
 		"birthday" : "Fall 21",
@@ -1215,7 +1187,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Sam
 	{
 		"name" : "Sam",
 		"birthday" : "Summer 17",
@@ -1269,7 +1240,6 @@
 			"All Universal Hates except for Joja Cola and Seaweed"
 		]
 	},
-	//Sandy
 	{
 		"name" : "Sandy",
 		"birthday" : "Fall 15",
@@ -1309,7 +1279,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Sebastian
 	{
 		"name" : "Sebastian",
 		"birthday" : "Winter 10",
@@ -1358,7 +1327,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Shane
 	{
 		"name" : "Shane",
 		"birthday" : "Spring 20",
@@ -1400,7 +1368,6 @@
 			"All Universal Hates except Seaweed"
 		]
 	},
-	//Vincent
 	{
 		"name" : "Vincent",
 		"birthday" : "Spring 10",
@@ -1443,7 +1410,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Willy
 	{
 		"name" : "Willy",
 		"birthday" : "Summer 24",
@@ -1505,7 +1471,6 @@
 			"All Universal Hates"
 		]
 	},
-	//Wizard
 	{
 		"name" : "Wizard",
 		"birthday" : "Winter 17",
