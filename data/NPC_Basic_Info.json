@@ -1,0 +1,1550 @@
+//NPCBasicInfo.JSON
+
+[
+	//Abigail
+	{
+		"name" : "Abigail",
+		"birthday" : "Fall 13",
+		"love" : [
+			"Amethyst",
+			"Blackberry Cobbler",
+			"Chocolate Cake",
+			"Pufferfish",
+			"Pumpkin",
+			"Spicy Eel",
+			"All Universal Loves"
+		],
+		"like" : [
+			"Quartz",
+			"All Universal Likes except for Vegetables"
+		],
+		"neutral" : [
+			"All Milk",
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Hazelnut",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Snow Yam",
+			"Winter Root",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"All Eggs",
+			"All Fruit except for Tree Fruit",
+			"All Vegetables except for Hops, Wheat, and Pumpkin",
+			"Sugar",
+			"Wild Horseradish",
+			"All Universal Dislikes except for Clay and Pufferfish"
+		],
+		"hate" : [
+			"Clay",
+			"Holly",
+			"All Universal Hates except for Sugar"
+		]
+	},
+	//Alex
+	{
+		"name" : "Alex",
+		"birthday" : "Summer 13",
+		"love" : [
+			"Complete Breakfast",
+			"Salmon Dinner",
+			"All Universal Loves"
+		],
+		"like" : [
+			"All Eggs except for Void Egg",
+			"All Universal Likes"
+		],
+		"neutral" : [
+			"All Fruit except for Tree Fruit",
+			"All Milk",
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Dandelion",
+			"Hazelnut",
+			"Leek",
+			"Morel", 
+			"Purple Mushroom",
+			"Snow Yam",
+			"Winter Root",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"Salmonberry",
+			"Wild Horseradish",
+			"All Universal Dislikes"
+		],
+		"hate" : [
+			"Holly",
+			"Quartz",
+			"All Universal Hates"
+		]
+	},
+	//Caroline
+	{
+		"name" : "Caroline",
+		"birthday" : "Winter 7",
+		"love" : [
+			"Fish Taco",
+			"Summer Spangle",
+			"All Universal Loves"
+		],
+		"like" : [
+			"Daffodil",
+			"All Universal Likes"
+		],
+		"neutral" : [
+			"All Eggs except for Void Egg",
+			"All Fruit except for Tree Fruit and Salmonberry",
+			"All Milk",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"All Mayonnaise", 
+			"Amaranth",
+			"Chanterelle",
+			"Common Mushroom",
+			"Dandelion",
+			"Hazelnut",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Snow Yam",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Dislikes"
+		],
+		"hate" : [
+			"Quartz",
+			"Salmonberry",
+			"All Universal Hates"
+		]
+	},
+	//Clint
+	{
+		"name" : "Clint",
+		"birthday" : "Winter 26",
+		"love" : [
+			"Amethyst",
+			"Aquamarine",
+			"Artichoke Dip",
+			"Emerald", 
+			"Fiddlehead Risotto",
+			"Gold Bar",
+			"Iridium Bar",
+			"Jade", 
+			"Omni Geode",
+			"Ruby",
+			"Topaz",
+			"All Universal Loves"
+		],
+		"like" : [
+			"Copper Bar",
+			"Iron Bar",
+			"All Universal Likes except for Flowers"
+		],
+		"neutral" : [
+			"All Eggs except for Void Egg",
+			"All Fruit except for Tree Fruit",
+			"All Milk",
+			"Chanterelle",
+			"Common Mushroom",
+			"Coal",
+			"Daffodil",
+			"Dandelion",
+			"Gold Ore",
+			"Hazelnut",
+			"Iridium Ore",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Refined Quartz",
+			"Snow Yam",
+			"Winter Root",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"Quartz",
+			"Salmonberry",
+			"Wild Horseradish",
+			"All Flowers except for Poppy",
+			"All Universal Dislikes except for Ore and Bars"
+		],
+		"hate" : [
+			"Holly",
+			"Poppy",
+			"All Universal Hates"
+		]
+	},
+	//Demetrius
+	{
+		"name" : "Demetrius",
+		"birthday" : "Summer 19",
+		"love" : [
+			"Bean Hotpot",
+			"Ice Cream",
+			"Rice Pudding",
+			"Strawberry",
+			"All Universal Loves"
+		],
+		"like" : [
+			"Purple Mushroom",
+			"All Eggs except for Void Egg",
+			"All Fruit except for Strawberry",
+			"All Universal Likes"
+		],
+		"neutral" : [
+			"All Fish except for Carp and Snail",
+			"All Milk",
+			"Common Mushroom",
+			"Daffodil",
+			"Dandelion",
+			"Hazelnut",
+			"Leek",
+			"Morel",
+			"Snow Yam",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"Quartz",
+			"All Universal Dislikes except for Fish"
+		],
+		"hate" : [
+			"Holly",
+			"All Universal Hates"
+		]
+	},
+	//Dwarf
+	{
+		"name" : "Dwarf",
+		"birthday" : "Summer 22",
+		"love" : [
+			"Amethyst",
+			"Aquamarine",
+			"Emerald",
+			"Jade",
+			"Omni Geode",
+			"Ruby",
+			"Topaz",
+			"All Univeral Loves"
+		],
+		"like" : [
+			"All Dwarf Scrolls",
+			"Dwarf Gadget",
+			"Dwarvish Helm",
+			"Quartz",
+			"All Universal Likes"
+		],
+		"neutral" : [
+			"Solar Essence",
+			"Void Essence",
+			"All Fruit except for Tree Fruit and Salmonberry",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"All Milk",
+			"All Eggs",
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Dandelion",
+			"Hazelnut",
+			"Holly",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Salmonberry",
+			"Snow Yam",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Dislikes except for Omni Geode, Solar Essence, and Void Essence"
+		],
+		"hate" : [
+			"All Universal Hates except for Dwarvish Items"
+		]
+	},
+	//Elliot
+	{
+		"name" : "Elliot",
+		"birthday" : "Fall 5",
+		"love" : [
+			"Crab Cakes",
+			"Duck Feather",
+			"Lobster",
+			"Pomegranate",
+			"Tom Kha Soup",
+			"All Universal Loves"
+		],
+		"like" : [
+			"Octopus",
+			"Squid",
+			"All Fruit except for Pomegranate and Salmonberry",
+			"All Universal Likes except for Amaranth and Pizza"
+		],
+		"neutral" : [
+			"All Eggs except for Void Egg",
+			"All Fis hexcept for Car, Lobster, Octopus, Sea Cucumber, Snail, and Squid",
+			"All Universal Neutrals except for Duck Feather"
+		],
+		"dislike" : [
+			"All Milk",
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Dandelion",
+			"Hazelnut",
+			"Holly",
+			"Leek",
+			"Morel",
+			"Pizza",
+			"Purple Mushroom",
+			"Snow Yam",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Dislikes except for Fish"
+		],
+		"hate" : [
+			"Amaranth",
+			"Quartz",
+			"Salmonberry",
+			"Sea Cucumber",
+			"All Universal Hates"
+		]
+	},
+	//Emily
+	{
+		"name" : "Emily",
+		"birthday" : "Spring 27",
+		"love" : [
+			"Amethyst",
+			"Aquamarine",
+			"Cloth",
+			"Emerald",
+			"Jade",
+			"Ruby",
+			"Survival Burger",
+			"Topaz",
+			"Wool",
+			"All Universal Loves"
+		],
+		"like" : [
+			"Daffodil",
+			"Quartz",
+			"All Universal Likes except for Fish Taco, Fried Eel, Ice Cream, Maki Roll, Rice Pudding, Salmon Dinner, Spicy Eel, and Sashimi"
+		],
+		"neutral" : [
+			"All Eggs except for Void Egg",
+			"All Fruit except for Tree Fruit and Salmonberry",
+			"All Milk",
+			"Chanterelle",
+			"Common Mushroom",
+			"Dandelion",
+			"Hazelnut",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Snow Yam",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Neutrals except for Wool"
+		],
+		"dislike" : [
+			"Fried Eel",
+			"Ice Cream",
+			"Rice Pudding",
+			"Salmonberry",
+			"Spicy Eel",
+			"All Universal Dislikes"
+		],
+		"hate" : [
+			"Fish Taco",
+			"Holly",
+			"Maki Roll",
+			"Salmon Dinner",
+			"Sashimi",
+			"All Universal Hates"
+		]
+	},
+	//Evelyn
+	{
+		"name" : "Evelyn",
+		"birthday" : "Winter 20",
+		"love" : [
+			"Beet",
+			"Chocolate Cake",
+			"Diamond",
+			"Fairy Rose",
+			"Stuffing",
+			"Tulip",
+			"All Universal Loves"
+		],
+		"like" : [
+			"All Milk",
+			"Daffodil",
+			"All Universal Likes except for Fried Eel, Garlic, Maki Roll, Sashimi, Spicy Eel, and Trout Soup"
+		],
+		"neutral" : [
+			"All Eggs except for Void Egg",
+			"All Fruit except for Tree Fruit, Salmonberry, and Spice Berry",
+			"Chanterelle",
+			"Common Mushroom",
+			"Dandelion",
+			"Hazelnut",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Snow Yam",
+			"Winter Root",
+			"All Universal Neutrals except for Clam and Coral"
+		],
+		"dislike" : [
+			"Quartz",
+			"Wild Horseradish",
+			"All Universal Dislikes except for Clay and Fish"
+
+		],
+		"hate" : [
+			"All Fish",
+			"Clam",
+			"Clay",
+			"Coral",
+			"Fried Eel",
+			"Garlic",
+			"Holly",
+			"Maki Roll",
+			"Salmonberry",
+			"Sashimi",
+			"Spice Berry",
+			"Spicy Eel",
+			"Trout Soup",
+			"All Universal Hates"
+		]
+	},
+	//George
+	{
+		"name" : "George",
+		"birthday" : "Fall 24",
+		"love" : [
+			"Fried Mushroom",
+			"Leek",
+			"All Universal Loves"
+		],
+		"like" : [
+			"Daffodil",
+			"All Universal Likes except for Flowers"
+		],
+		"neutral" : [
+			"All Milk",
+			"All Fruit except for Tree Fruit and Salmonberry",
+			"All Eggs except for Void Egg",
+			"Chanterelle",
+			"Common Mushroom",
+			"Hazelnut",
+			"Morel",
+			"Purple Mushroom",
+			"Snow Yam",
+			"Winter Root",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"All Flowers except for Poppy",
+			"Salmonberry",
+			"Wild Horseradish",
+			"All Universal Dislikes except for Clay"
+		],
+		"hate" : [
+			"Poppy",
+			"Clay",
+			"Dandelion",
+			"Holly",
+			"Quartz",
+			"All Universal Hates"
+		]
+	},
+	//Gus
+	{
+		"name" : "Gus",
+		"birthday" : "Summer 8",
+		"love" : [
+			"Diamond",
+			"Escargot",
+			"Fish Taco",
+			"Orange",
+			"All Universal Loves"
+		],
+		"like" : [
+			"Daffodil",
+			"All Universal Likes except for Coleslaw"
+		],
+		"neutral" : [
+			"All Eggs except for Void Egg",
+			"All Fruit except for Tree Fruit and Salmonberry",
+			"All Milk",
+			"Chanterelle",
+			"Common Mushroom",
+			"Dandelion",
+			"Hazelnut",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Snow Yam",
+			"Winter Root",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"Salmonberry",
+			"Wild Horseradish",
+			"All Universal Dislikes"
+		],
+		"hate" : [
+			"Coleslaw",
+			"Holly",
+			"Quartz",
+			"All Universal Hates"
+		]
+	},
+	//Haley
+	{
+		"name" : "Haley",
+		"birthday" : "Spring 14",
+		"love" : [
+			"Coconut",
+			"Fruit Salad",
+			"Pink Cake",
+			"Sunflower", 
+			"All Universal Loves except for Prismatic Shard"
+		],
+		"like" : [
+			"Daffodil",
+			"All Universal Likes except for Vegetables"
+		],
+		"neutral" : [
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"All Eggs",
+			"All Fruit except for Coconut",
+			"All Milk",
+			"All Vegetables except for Hops and Wheat",
+			"Chanterelle",
+			"Common Mushroom",
+			"Dandelion",
+			"Hazelnut",
+			"Holly",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Quartz",
+			"Snow Yam",
+			"Winter Root",
+			"All Universal Dislikes except for Clay and Fish"
+		],
+		"hate" : [
+			"Clay",
+			"Prismatic Shard",
+			"Wild Horseradish",
+			"All Fish",
+			"All Universal Hates"
+		]
+	},
+	//Harvey
+	{
+		"name" : "Harvey",
+		"birthday" : "Summer 4",
+		"love" : [
+			"Coffee",
+			"Pickles",
+			"Super Meal",
+			"Truffle Oil",
+			"Wine",
+			"All Universal Loves"
+		],
+		"like" : [
+			"All Fruit except for Salmonberry and Spice Berry",
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Dandelion",
+			"Duck Egg",
+			"Duck Feather",
+			"Goat Milk",
+			"Hazelnut",
+			"Holly",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Quartz",
+			"Snow Yam",
+			"Spring Onion",
+			"Wild Horseradish", 
+			"Winter Root",
+			"All Universal Likes except for Cheeses"
+		],
+		"neutral" : [
+			"All Eggs except for Duck Egg and Void Egg",
+			"Cow Milk",
+			"All Universal Neutrals except for Duck Feather, Bread, Coral, Nautilus Shell, and Rainbow Shell"
+		],
+		"dislike" : [
+			"Bread",
+			"Cheeses",
+			"All Universal Dislikes except for Spring Onion"
+		],
+		"hate" : [
+			"Coral",
+			"Nautilus Shell",
+			"Rainbow Shell",
+			"Salmonberry",
+			"Spice Berry",
+			"All Universal Hates"
+		]
+	},
+	//Jas
+	{
+		"name" : "Jas",
+		"birthday" : "Summer 4",
+		"love" : [
+			"Fairy Rose",
+			"Pink Cake",
+			"Plum Pudding",
+			"All Universal Loves"
+		],
+		"like" : [
+			"Coconut",
+			"Daffodil",
+			"Mead",
+			"All Universal Likes except for Artisan Goods and Vegetables"
+		],
+		"neutral" : [
+			"All Milk",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"All Eggs",
+			"All Fruit except for Coconut and Tree Fruit",
+			"All Vegetables except for Hops and Wheat",
+			"Chanterelle",
+			"Common Mushroom",
+			"Dandelion",
+			"Hazelnut",
+			"Holly",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Quartz",
+			"Snow Yam",
+			"Winter Root",
+			"All Universal Dislikes except for Clay"
+		],
+		"hate" : [
+			"All Artisan Goods except for Mead and Oil",
+			"Clay",
+			"Wild Horseradish",
+			"All Universal Hates"
+		]
+	},
+	//Jodi
+	{
+		"name" : "Jodi",
+		"birthday" : "Fall 11",
+		"love" : [
+			"Chocolate Cake",
+			"Crispy Bass",
+			"Diamond",
+			"Eggplant Parmesan",
+			"Fried Eel",
+			"Pancake",
+			"Rhubarb Pie",
+			"Vegatable Medley",
+			"All Universal Loves"
+		],
+		"like" : [
+			"All Milk",
+			"All Fruit except for Spice Berry",
+			"All Eggs except for Void Egg",
+			"All Universal Likes except for Garlic"
+		],
+		"neutral" : [
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"Chanterelle",
+			"Common Mushroom",
+			"Garlic",
+			"Hazelnut",
+			"Holly",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Quartz",
+			"Snow Yam",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Dislikes"
+		],
+		"hate" : [
+			"Daffodil",
+			"Dandelion",
+			"Spice Berry",
+			"All Universal Hates"
+		]
+	},
+	//Kent
+	{
+		"name" : "Kent",
+		"birthday" : "Winter 1",
+		"love" : [
+			"Fiddlehead Risotto",
+			"Roasted Hazelnut",
+			"Universal Loves"
+		],
+		"like" : [
+			"All Fruit",
+			"All Eggs except for Void Egg",
+			"Dffodil",
+			"All Universal Likes except for Algae Soup, Sashimi, and Tortilla"
+		],
+		"neutral" : [
+			"Chanterelle",
+			"Common Mushroom",
+			"Dandelion",
+			"Hazelnut",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"Quartz",
+			"Snow Yam",
+			"All Universal Dislikes"
+		],
+		"hate" : [
+			"All Milk",
+			"Algae Soup",
+			"Holly",
+			"Sashimi",
+			"Tortilla",
+			"All Universal Hates"
+		]
+	},
+	//Krobus
+	{
+		"name" : "Krobus",
+		"birthday" : "Winter 1",
+		"love" : [
+			"Diamond",
+			"Iridium Bar",
+			"Pumpkin",
+			"Void Egg",
+			"Void Mayonnaise",
+			"Wild Horseradish",
+			"All Universal Loves"
+		],
+		"like" : [
+			"Gold Bar",
+			"All Universal Likes except for Cooking and Life Elixir"
+		],
+		"neutral" : [
+			"All Milk",
+			"All Fruit except for Tree Fruit and Salmonberry",
+			"All Eggs except for Void Egg",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"All Cooking except for Bread, Fried Egg, and Strange Bun",
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Dandelion",
+			"Hazelnut",
+			"Holly",
+			"Leek",
+			"Life Elixir",
+			"Morel",
+			"Purple Mushroom",
+			"Salmonberry",
+			"Snow Yam",
+			"Winter Root",
+			"All Universal Dislikes except for Gold Bar, Iridium Bar, and Void Egg"
+		],
+		"hate" : [
+			"All Universal Hates except for Void Mayonnaise"
+		]
+	},
+	//Leah
+	{
+		"name" : "Leah",
+		"birthday" : "Winter 23",
+		"love" : [
+			"Goat Cheese",
+			"Poppyseed Muffin",
+			"Salad",
+			"Stir Fry",
+			"Truffle",
+			"Vegetable Medley",
+			"Wine",
+			"All Universal Loves"
+		],
+		"like" : [
+			"All Eggs except for Void Egg",
+			"All Fruit",
+			"All Milk",
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Dandelion",
+			"Driftwood",
+			"Hazelnut",
+			"Holly",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Snow Yam",
+			"Spring Onion",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Likes except for Foraged Minerals, Gems, Carp Surprise, Cookie, Hashbrowns, Ice Cream, Pancakes, Pizza, Rice Pudding, Survival Burger, and Tortilla"
+		],
+		"neutral" : [
+			"All Universal Neutrals except for Bread, Fried Egg, and Truffle"
+		],
+		"dislike" : [
+			"All Foraged Minerals except for Earth Crystal",
+			"All Gems except for Diamond and Prismatic Shard",
+			"Carp Surprise",
+			"Cookie",
+			"Fried Egg",
+			"Ice Cream",
+			"Pink Cake",
+			"Rice Pudding",
+			"Seaweed",
+			"Survival Burger",
+			"Tortilla",
+			"All Universal Dislikes except for Driftwood, Spring Onion, and Void Egg"
+		],
+		"hate" : [
+			"Bread",
+			"Hashbrowns",
+			"Pancakes",
+			"Pizza",
+			"Void Egg",
+			"All Universal Hates except for Seaweed"
+		]
+	},
+	//Lewis
+	{
+		"name" : "Lewis",
+		"birthday" : "Spring 7",
+		"love" : [
+			"Autumn's Bounty",
+			"Glazed Yams",
+			"Hot Pepper",
+			"Vegetable Medley",
+			"All Universal Loves"
+		],
+		"like" : [
+			"Blueberry",
+			"Cactus Fruit",
+			"Coconut",
+			"All Universal Likes"
+		],
+		"neutral" : [
+			"All Eggs except for Void Egg",
+			"All Fruit except for Blueberry, Cactus Fruit, Tree Fruit, Hot Pepper, and Salmonberry",
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Dandelion",
+			"Hazelnut",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Snow Yam",
+			"Winter Root",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"All Milk",
+			"Salmonberry",
+			"Wild Horseradish",
+			"All Universal Dislikes"
+		],
+		"hate" : [
+			"Holly",
+			"Quartz",
+			"All Universal Hates"
+		]
+	},
+	//Linus
+	{
+		"name" : "Linus",
+		"birthday" : "Winter 3",
+		"love" : [
+			"Blueberry Tart",
+			"Cactus Fruit",
+			"Coconut",
+			"Dish o' The Sea",
+			"Yam",
+			"All Universal Loves"
+		],
+		"like" : [
+			"All Eggs except for Void Egg",
+			"All Milk",
+			"All Fruit except for Cactus Fruit and Coconut",
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Dandelion",
+			"Hazelnut",
+			"Holly",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Snow Yam",
+			"Spring Onion",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Likes except for Foraged Minerals and Gems other than Diamond and Prismatic Shard"
+		],
+		"neutral" : [
+			"All Fish except for Carp and Snail",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"All Foraged Minerals",
+			"All Gems except for Diamond and Prismatic Shard",
+			"All Universal Dislikes except for Fish and Spring Onion"
+		],
+		"hate" : [
+			"All Universal Hates"
+		]
+	},
+	//Marnie
+	{
+		"name" : "Marnie",
+		"birthday" : "Fall 18",
+		"love" : [
+			"Diamond",
+			"Farmer's Lunch",
+			"Pink Cake",
+			"Pumpkin Pie",
+			"All Universal Loves"
+		],
+		"like" : [
+			"All Eggs except for Void Egg",
+			"All Milk",
+			"Quartz",
+			"All Universal Likes"
+		],
+		"neutral" : [
+			"All Fruit except for Tree Fruit and Salmonberry",
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Dandelion",
+			"Hazelnut",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Snow Yam",
+			"Winter Root",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"Salmonberry",
+			"Seaweed",
+			"Wild Horseradish",
+			"All Universal Dislikes except for Clay"
+		],
+		"hate" : [
+			"Clay",
+			"Holly",
+			"All Universal Hates"
+		]
+	},
+	//Maru
+	{
+		"name" : "Maru",
+		"birthday" : "Summer 10",
+		"love" : [
+			"Battery Pack",
+			"Cauliflower",
+			"Cheese Cauliflower",
+			"Diamond",
+			"Gold Bar",
+			"Iridium Bar",
+			"Miner's Treat",
+			"Pepper Poppers",
+			"Rhubarb Pie",
+			"All Universal Loves"
+		],
+		"like" : [
+			"Copper Bar",
+			"Iron Bar",
+			"Oak Resin",
+			"Pine Tar",
+			"Quartz",
+			"All Universal Likes except for Honey, Maple Syrup, and Pickles"
+		],
+		"neutral" : [
+			"All Eggs except for Void Egg",
+			"All Fruit except for Blackberry, Crystal Fruit, Tree Fruit, Salmonberry, and Strawberry",
+			"All Milk",
+			"Chanterelle",
+			"Daffodil",
+			"Dandelion",
+			"Hazelnut",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Neutrals except for Truffle"
+		],
+		"dislike" : [
+			"Blackberry",
+			"Common Mushroom",
+			"Crystal Fruit",
+			"Maple Syrup",
+			"Salmonberry",
+			"All Universal Dislikes except for Battery Pack, Metal Bars, Oak Resin, and Pine Tar"
+		],
+		"hate" : [
+			"Holly",
+			"Honey",
+			"Pickles",
+			"Snow Yam",
+			"Truffle",
+			"All Universal Hates"
+		]
+	},
+	//Pam
+	{
+		"name" : "Pam",
+		"birthday" : "Spring 18",
+		"love" : [
+			"Beer",
+			"Cactus Fruit",
+			"Glazed Yam",
+			"Mead",
+			"Pale Ale",
+			"Parsnip",
+			"Parsnip Soup",
+			"All Universal Loves"
+		],
+		"like" : [
+			"All Fruit except for Cactus Fruit",
+			"All Milk",
+			"Daffodil",
+			"All Universal Likes"
+		],
+		"neutral" : [
+			"All Fish except for Carp, Octopus, Snail, and Squid",
+			"Chanterelle",
+			"Common Mushroom",
+			"Dandelion",
+			"Hazelnut",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Snow Yam",
+			"Winter Root",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"All Eggs",
+			"Quartz",
+			"Wild Horseradish",
+			"All Universal Dislikes except for Fish"
+		],
+		"hate" : [
+			"Holly",
+			"Octopus",
+			"Squid",
+			"All Universal Hates"
+		]
+	},
+	//Penny
+	{
+		"name" : "Penny",
+		"birthday" : "Fall 2",
+		"love" : [
+			"Diamond",
+			"Emerald",
+			"Melon",
+			"Poppy",
+			"Poppyseed Muffin",
+			"Red Plate",
+			"Roots Platter",
+			"Sandfish",
+			"Tom Kha Soup",
+			"All Universal Loves except for Rabbit's Foot"
+		],
+		"like" : [
+			"All Milk",
+			"Dandelion",
+			"Leek",
+			"All Universal Likes except for Algae Soup, Beer, Mead, Pale Ale, Pale Broth, and Wine"
+		],
+		"neutral" : [
+			"All Eggs except for Void Egg",
+			"All Fruit except for Tree Fruit, Grape, Melon, and Salmonberry",
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Hazelnut",
+			"Morel",
+			"Snow Yam",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Neutrals except for Duck Feather, Hops, and Wool"
+		],
+		"dislike" : [
+			"Algae Soup",
+			"Duck Feather",
+			"Pale Broth",
+			"Purple Mushroom",
+			"Quartz",
+			"Red Mushroom",
+			"Salmonberry",
+			"Wool",
+			"All Universal Dislikes except for Sandfish"
+		],
+		"hate" : [
+			"Beer",
+			"Grape",
+			"Holly",
+			"Hops",
+			"Mead",
+			"Pale Ale",
+			"Rabbit's Foot",
+			"Wine",
+			"All Universal Hates except for Poppy and Red Mushroom" 
+		]
+	},
+	//Pierre
+	{
+		"name" : "Pierre",
+		"birthday" : "Spring 26",
+		"love" : [
+			"Fried Calamari",
+			"All Universal Loves"
+		],
+		"like" : [
+			"All Eggs except for Void Egg",
+			"All Milk",
+			"Daffodil",
+			"Dandelion",
+			"All Universal Likes except for Corn, Foraged Minerals, Gems, Parsnip Soup, and Tortilla"
+		],
+		"neutral" : [
+			"All Fruit except for Tree Fruit and Salmonberry",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"All Foraged Minerals",
+			"All Gems except for Diamond and Prismatic Shard",
+			"Chanterelle",
+			"Common Mushroom",
+			"Hazelnut",
+			"Holly",
+			"Leek",
+			"Morel",
+			"Salmonberry",
+			"Purple Mushroom",
+			"Snow Yam",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Dislikes except for Fish"
+		],
+		"hate" : [
+			"All Fish",
+			"Corn",
+			"Garlic",
+			"Parsnip Soup",
+			"Tortilla",
+			"All Universal Hates"
+		]
+	},
+	//Robin
+	{
+		"name" : "Robin",
+		"birthday" : "Fall 21",
+		"love" : [
+			"Goat Cheese",
+			"Peach",
+			"Spaghetti",
+			"All Universal Loves"
+		],
+		"like" : [
+			"All Milk",
+			"All Fruit except for Peach",
+			"Hardwood",
+			"Quartz",
+			"All Universal Likes"
+		],
+		"neutral" : [
+			"All Eggs except for Void Egg",
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Dandelion",
+			"Hazelnut",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Snow Yam",
+			"Winter Root",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"Wild Horseradish",
+			"All Universal Dislikes except for Hardwood"
+		],
+		"hate" : [
+			"Holly",
+			"All Universal Hates"
+		]
+	},
+	//Sam
+	{
+		"name" : "Sam",
+		"birthday" : "Summer 17",
+		"love" : [
+			"Cactus Fruit",
+			"Maple Bar",
+			"Pizza",
+			"Tigerseye",
+			"All Universal Loves"
+		],
+		"like" : [
+			"All Eggs except for Void Egg",
+			"Joja Cola",
+			"All Universal Likes except for Mayonnaises, Pickles, and Vegetables"
+		],
+		"neutral" : [
+			"All Fruit except for Cactus Fruit, Tree Fruit, and Salmonberry",
+			"All Milk",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"All Vegetables except for Hops and Wheat",
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Dandelion",
+			"Hazelnut",
+			"Holly",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Quartz",
+			"Salmonberry",
+			"Seaweed",
+			"Snow Yam",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Dislikes except for Coal, Metal Bars, Refined Quartz, and Tigerseye"
+		],
+		"hate" : [
+			"Coal",
+			"Copper Bar",
+			"Duck Mayonnaise",
+			"Gold Bar",
+			"Gold Ore",
+			"Iridium Bar",
+			"Iridium Ore",
+			"Mayonnaise",
+			"Pickles",
+			"Refined Quartz",
+			"All Universal Hates except for Joja Cola and Seaweed"
+		]
+	},
+	//Sandy
+	{
+		"name" : "Sandy",
+		"birthday" : "Fall 15",
+		"love" : [
+			"Crocus",
+			"Daffodil",
+			"Sweet Pea",
+			"All Universal Loves"
+		],
+		"like" : [
+			"All Fruit",
+			"Goat Milk",
+			"Quartz",
+			"Wool",
+			"All Universal Likes"
+		],
+		"neutral" : [
+			"All Eggs except for Void Egg",
+			"Chanterelle",
+			"Common Mushroom",
+			"Cow Milk",
+			"Dandelion",
+			"Hazelnut",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Snow Yam",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Neutrals except for Wool"
+		],
+		"dislike" : [
+			"All Universal Dislikes"
+		],
+		"hate" : [
+			"Holly",
+			"All Universal Hates"
+		]
+	},
+	//Sebastian
+	{
+		"name" : "Sebastian",
+		"birthday" : "Winter 10",
+		"love" : [
+			"Frozen Tear",
+			"Obsidian",
+			"Pumpkin Soup",
+			"Sashimi",
+			"Void Egg",
+			"All Universal Loves"
+		],
+		"like" : [
+			"Quartz",
+			"All Universal Likes except for Flowers, Complete Breakfast, Farmer's Lunch, Omelet, and Artisan goods except for Coffee, Mead, and Oil"
+		],
+		"neutral" : [
+			"All Fruit except for Tree Fruit",
+			"All Fish except for Carp and Snail",
+			"All Milk",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"All Flowers except for Poppy",
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Dandelion",
+			"Hazelnut",
+			"Holly",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Salmonberry",
+			"Snow Yam",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Dislikes except for Clay, Fish, Obsidian, and Void Egg"
+		],
+		"hate" : [
+			"All Artisan Goods except for Coffee, Mead, and Oil",
+			"All Eggs except for Void Egg",
+			"Clay",
+			"Complete Breakfast",
+			"Farmer's Lunch",
+			"Omelet",
+			"All Universal Hates"
+		]
+	},
+	//Shane
+	{
+		"name" : "Shane",
+		"birthday" : "Spring 20",
+		"love" : [
+			"Beer",
+			"Hot Pepper",
+			"Pepper Poppers",
+			"Pizza",
+			"All Universal Loves"
+		],
+		"like" : [
+			"All Eggs except for Void Egg",
+			"All Fruit",
+			"All Universal Likes except for Pickles"
+		],
+		"neutral" : [
+			"All Milk",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Dandelion",
+			"Hazelnut",
+			"Holly",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Seaweed",
+			"Snow Yam",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Dislikes"
+		],
+		"hate" : [
+			"Pickles",
+			"Quartz",
+			"All Universal Hates except Seaweed"
+		]
+	},
+	//Vincent
+	{
+		"name" : "Vincent",
+		"birthday" : "Spring 10",
+		"love" : [
+			"Cranberry Candy",
+			"Grape",
+			"Pink Cake",
+			"All Universal Loves"
+		],
+		"like" : [
+			"Coconut",
+			"Daffodil",
+			"All Universal Likes except for Vegetables and Artisan Goods other than Mead and Oil"
+		],
+		"neutral" : [
+			"All Milk",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"All Eggs",
+			"All Fruit except for Coconut, Grape, and Tree Fruit",
+			"All Vegetables except for Hops and Wheat",
+			"Chanterelle",
+			"Common Mushroom",
+			"Dandelion",
+			"Hazelnut",
+			"Holly",
+			"Leek",
+			"Morel",
+			"Purple Mushroom",
+			"Quartz",
+			"Snow Yam",
+			"Winter Root",
+			"All Universal Dislikes except for Clay"
+		],
+		"hate" : [
+			"All Artisan Goodes except for Mead and Oil",
+			"Clay",
+			"Wild Horseradish",
+			"All Universal Hates"
+		]
+	},
+	//Willy
+	{
+		"name" : "Willy",
+		"birthday" : "Summer 24",
+		"love" : [
+			"Catfish",
+			"Diamond",
+			"Iridium Bar",
+			"Mead",
+			"Octopus",
+			"Pumpkin",
+			"Sea Cucumber",
+			"Sturgeon",
+			"All Universal Loves"
+		],
+		"like" : [
+			"Gold Bar",
+			"Quartz",
+			"Lingcod",
+			"Tiger Trout",
+			"Baked Fish",
+			"Carp Surprise",
+			"Chowder",
+			"Crab Cakes",
+			"Crispy Bass",
+			"Fish Stew",
+			"Fish Taco",
+			"Fried Calamari",
+			"Lobster Bisque",
+			"Salmon Dinner",
+			"Trout Soup",
+			"All Universal Likes except for Life Elixir and non-fish Cooking Dishes"
+		],
+		"neutral" : [
+			"All Eggs",
+			"All Fish except for Carp, Catfish, Lingcod, Octopus, Sea Cucumber, Snail, Sturgeon, and Tiger Trout",
+			"All Fruit except for Tree Fruit and Salmonberry",
+			"All Milk",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"All Cooking except for Fish Dishes",
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Dandelion",
+			"Hazelnut",
+			"Holly",
+			"Leek",
+			"Life Elixir",
+			"Morel",
+			"Purple Mushroom",
+			"Salmonberry",
+			"Snow Yam",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Dislikes except Fish, Gold Bar, and Iron Bar"
+		],
+		"hate" : [
+			"All Universal Hates"
+		]
+	},
+	//Wizard
+	{
+		"name" : "Wizard",
+		"birthday" : "Winter 17",
+		"love" : [
+			"Purple Mushroom",
+			"Solar Essence",
+			"Super Cucumber",
+			"Void Essence",
+			"All Universal Loves"
+		],
+		"like" : [
+			"All Geode Minerals",
+			"Quartz",
+			"All Universal Likes",
+		],
+		"neutral" : [
+			"All Fruit except for Tree Fruit and Salmonberry",
+			"All Universal Neutrals"
+		],
+		"dislike" : [
+			"All Eggs",
+			"All Milk",
+			"Chanterelle",
+			"Common Mushroom",
+			"Daffodil",
+			"Dandelion",
+			"Hazelnut",
+			"Holly",
+			"Leek",
+			"Morel",
+			"Salmonberry",
+			"Slime",
+			"Snow Yam",
+			"Wild Horseradish",
+			"Winter Root",
+			"All Universal Dislikes except for Geode Minerals, Solar Essence, and Void Essence"
+		],
+		"hate" : [
+			"All Universal Hates except for Slime"
+		]
+	}
+] 

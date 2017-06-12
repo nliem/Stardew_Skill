@@ -1,9 +1,13 @@
 var AWS = require('aws-sdk'); 
-AWS.config.update({accessKeyId: 'AKIAJ5AMDOAVNDBRNWZQ', secretAccessKey: '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', region: "us-east-1"});
+AWS.config.update({
+    accessKeyId: 'AKIAJAVDR2Q7T2HYWJ3A', 
+    secretAccessKey: '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', 
+    region: "us-east-1"
+});
 var dynamodb = new AWS.DynamoDB();
 
 var params = {
-    TableName: "Stardew_Data",
+    TableName: "Stardew_NPC_Basic_Info",
     KeySchema: [{AttributeName: "name", KeyType: "HASH"}],
     AttributeDefinitions: [{AttributeName: "name", AttributeType: "S"}],
     ProvisionedThroughput: {       
