@@ -9,11 +9,6 @@ Skill for accessing quick resources for Stardew Valley
 
 var AWS = require("aws-sdk");
 
-AWS.config = new AWS.Config();
-
-AWS.config.accessKeyID = "AKIAJ5AMDOAVNDBRNWZQ";
-AWS.config.secretAccessKey = "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";
-AWS.config.region = "us-east-1";
 
 var dynamodb = new AWS.DynamoDB.DocumentClient();
 

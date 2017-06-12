@@ -7,7 +7,7 @@ var inputFile = "stardew.csv"
 
 function populate_table(data){
 		
-	AWS.config.update({accessKeyId: 'AKIAI6FHDCN6637PUVNQ', secretAccessKey: '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', region: "us-east-1"});
+	AWS.config.update({accessKeyId: 'AKIAIBVC4TUV6EMBGYZQ', secretAccessKey: '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', region: "us-east-1"});
 	var dynamodb = new AWS.DynamoDB.DocumentClient();
 
 	for(i=0;i<data.length;i++){
