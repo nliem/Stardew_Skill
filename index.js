@@ -5,15 +5,17 @@ Skill for accessing quick resources for Stardew Valley
 
 */
 
-/*Helper which builds all of the responses*/
-
 var AWS = require("aws-sdk");
-
 
 var dynamodb = new AWS.DynamoDB.DocumentClient();
 
 var NPC_Basic_Info = "Stardew_NPC_Basic_Info";
 
+/*
+		HELPER FUNCTIONS
+*/
+
+/*Helper which builds all of the responses*/
 function buildSpeechletResponse(title, output, repromptText, shouldEndSession){
 	return{
 		outputSpeech: {
@@ -43,22 +45,40 @@ function buildResponse(sessionAttributes, speechletResponse){
 	};
 }
 
-//Parses NPC slot value to return the base NPC value
+/*Parses NPC slot value to return the base NPC value*/
 function processNPC(NPC){
+	var result = "";
 	var possessive = "\'s";
-	var the = "The";
+	var The = "The";
+	var the = "the";
 
 	if(NPC.indexOf(possessive) !== -1){
 		NPC = NPC.substring(0, (NPC.length-2));
 	}
-	if(NPC.indexOf(the) !== -1){
+	if(NPC.indexOf(the) !== -1 || NPC.indexOf(The)!== -1){
 		NPC = NPC.substring(4);
 	}
+	result = NPC.charAt(0).toUpperCase() + NPC.slice(1);
+	if(result === 'Mayor'){
+		result = 'Lewis';
+	}
 
-	return NPC;
+	return result;
 }
 
-/*Functions to control the skill's behavior*/
+/*Parses Preference slot value to return the base Preference value*/
+function processPreference(preference){
+	var result = preference;
+	var lastChar = preference.charAt(preference.length - 1);
+	if(lastChar === 'd' || lastChar === 's'){
+		result = preference.substring(0, (preference.length-1))
+	}
+	return result;
+}
+
+/*
+		FUNCTIONS TO CONTROL THE SKILL'S BEHAVIOR
+*/
 
 function getWelcomeResponse(callback){
 	const sessionAttributes = {}; //optional session attributes could be added here
@@ -94,7 +114,7 @@ function handleBirthdayIntent(intent, session, callback){
 		console.log("NPC to Query: " + NPC);
 
 		var params = {
-			TableName : NPC_Data_Table,
+			TableName : NPC_Basic_Info,
 			Key : {
 				"name" : NPC
 			}
@@ -109,10 +129,6 @@ function handleBirthdayIntent(intent, session, callback){
 			} else{
 				console.log("GetItem succeeded: ", JSON.stringify(data, null, 2));
 				birthday = data.Item.birthday.toString();
-				console.log("Birthday Value: " + birthday);
-				console.log("TOEIJOWEIJWEOFIWEJ");
-				console.log("Post query Birthday Value: " + birthday);
-
 				if(NPC === "Wizard" || NPC === "Dwarf"){
 					speechOutput = "The ";
 				}
@@ -122,15 +138,11 @@ function handleBirthdayIntent(intent, session, callback){
 			}
 		});
 
-
-
 	} else{
 		speechOutput = "I can't recognize the NPC you are asking about. Please try again.";
 		repromptText = "Sorry, I didn't understand the NPC you are asking about. Try again.";
 		callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
 	}
-
-	
 }
 
 function handleGiftIntent(intent, session, callback){
@@ -144,45 +156,57 @@ function handleGiftIntent(intent, session, callback){
 	var NPC, preference, gifts;
 
 	if(npcSlot && preferenceSlot){
-	    NPC = npcSlot.value;
-		preference = preferenceSlot.value;
+	    NPC = processNPC(npcSlot.value);
+		preference = processPreference(preferenceSlot.value);
 	} else{
 		throw new Error('Insufficient information for handleGiftIntent');
 	}
 
-	if(preference === 'loves'){
-		preference = 'love';
-	}
-	if(preference === 'likes'){
-		preference = 'like';
-	}
-
-	if(NPC === "Clint" || NPC === "Clint's"){
-		gifts = Clint[preference];
-	} else if (NPC === "Emily" || NPC === "Emily's"){
-		gifts = Emily[preference];
-	} else{
-		throw new Error('Invalid NPC for handleGiftIntent');
-	}
-
-	var giftsPhrase = '';
-	for(var i = 0; i < gifts.length; i++){
-		if(i === (gifts.length - 1)){
-			giftsPhrase += ', and ' + gifts[i];
-		} else if (i === 0){
-			giftsPhrase += gifts[i];
-		} else{
-			giftsPhrase += ', ' + gifts[i];
+	var params = {
+		TableName : NPC_Basic_Info,
+		Key : {
+			"name" : NPC
 		}
-	}
+	};
 
-	speechOutput = NPC + ' ' + preference + "s the following items: " + giftsPhrase;
-	repromptText = "You can ask me about other NPC's birthdays and gift preferences.";
+	dynamodb.get(params, function(err, data){
+		if(err || data.Item == null){
+			console.error("Unable to fet NPC " + NPC + ": " + JSON.stringify(err, null, 2));
+			speechOutput = "I can't recognize the NPC you are asking about. Please try again.";
+			repromptText = "Sorry, I didn't understand the NPC you are asking about. Try again.";
+			callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+		} else{
+			console.log("GetItem succeeded: " + JSON.stringify(data, null, 2));
+			var giftsList = data.Item[preference];
+			console.log("Gift list for " + preference + " : " + giftsList);
+			var giftsPhrase = "";
+			for(var i = 0; i < giftsList.length; i++){
+				if(i === (gifts.length - 1)){
+					giftsPhrase += ', and ' + gifts[i];
+				} else if (i === 0){
+					giftsPhrase += gifts[i];
+				} else{
+					giftsPhrase += ', ' + gifts[i];
+				}
+			}
 
-	callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+			if(NPC === "Wizard" || NPC === "Dwarf"){
+				speechOutput = "The ";
+			}
+			if(preference === "neutral"){
+				speechOutput += NPC + " feels neutral about the following items: " + giftsPhrase;
+			} else{
+				speechOutput += NPC + " " + preference + "s the following items: " + giftsPhrase;
+			}
+			repromptText = "You can ask me about other NPC's birthdays and gift preferences.";
+			callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+		}
+	});
 }
 
-/*Event handlers*/
+/*
+		EVENT HANDLER FUNCTIONS
+*/
 
 function onSessionStarted(sessionStartedRequest, session){
 	console.log('onSessionStarted requestId=${sessionStartedRequest.requestId}, sessionId=${session.sessionID}');
@@ -218,7 +242,9 @@ function onSessionEnded(sessionEndedRequest, session){
 	//optional cleanup logic here
 }
 
-/*Main Handler*/
+/*
+		MAIN HANDLER
+*/
 
 //Routes the incoming request based on type (LaunchRequest, IntentRequest, etc.)
 //The JSON body of th erequest is provided in the event parameter
