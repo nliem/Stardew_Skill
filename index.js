@@ -10,6 +10,7 @@ var AWS = require("aws-sdk");
 var dynamodb = new AWS.DynamoDB.DocumentClient();
 
 var NPC_Basic_Info = "Stardew_NPC_Basic_Info";
+var Universal_Definitions = "Stardew_Universal_Definitions";
 
 /*
 		HELPER FUNCTIONS
@@ -171,7 +172,7 @@ function handleGiftIntent(intent, session, callback){
 
 	dynamodb.get(params, function(err, data){
 		if(err || data.Item == null){
-			console.error("Unable to fet NPC " + NPC + ": " + JSON.stringify(err, null, 2));
+			console.error("Unable to fetch NPC " + NPC + ": " + JSON.stringify(err, null, 2));
 			speechOutput = "I can't recognize the NPC you are asking about. Please try again.";
 			repromptText = "Sorry, I didn't understand the NPC you are asking about. Try again.";
 			callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
@@ -204,6 +205,55 @@ function handleGiftIntent(intent, session, callback){
 	});
 }
 
+function handleUniversalIntent(intent, session, callback){
+	const cardTitle = intent.name;
+	const preferenceSlot = intent.slots.Preference;
+	let repromptText = '';
+	let speechOutput = '';
+	let sessionAttributes = {};
+	const shouldEndSession = false;
+	var preference;
+
+	if(preferenceSlot){
+		preference = processPreference(preferenceSlot.value);
+	} else{
+		throw new Error('Insufficient information for handleUniversalIntent');
+	}
+
+	var params = {
+		TableName: Universal_Definitions,
+		Key: {
+			"category": preference
+		}
+	};
+
+	dynamodb.get(params, function(err, data){
+		if(err || data.Item == null){
+			console.error("Unable to fetch Universal definition for " + preference + " : " + JSON.stringify(err, null, 2));
+			speechOutput = "I can't recognize the Universal Preference you are asking about. Please try again.";
+			repromptText = "Sorry, I didn't understand the Universal Preference you are asking about. Try again.";
+			callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+		} else{
+			console.log("GetItem succeeded: " + JSON.stringify(data, null, 2));
+			var universals = data.Item.items;
+			var universalsPhrase = '';
+			for(var i = 0; i < universals.length; i++){
+				if(i === 0){
+					universalsPhrase += universals[i];
+				} else if(i === (universals.length-1)){
+					universalsPhrase += ', and ' + universals[i];
+				} else{
+					universalsPhrase += ', ' + universals[i];
+				}
+			}
+
+			speechOutput = "The Universals " + preference + "s are : " + universalsPhrase;
+			repromptText = "You can ask me for other Universal definitions and NPC information.";
+			callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+		}
+	});
+}
+
 /*
 		EVENT HANDLER FUNCTIONS
 */
@@ -228,11 +278,11 @@ function onIntent(intentRequest, session, callback){
 	//dispatch intent to appropriate handler
 	if(intentName === 'BirthdayIntent'){
 		handleBirthdayIntent(intent, session, callback);
-	}
-	else if(intentName === 'GiftIntent'){
+	} else if(intentName === 'GiftIntent'){
 		handleGiftIntent(intent, session, callback);
-	}
-	else{
+	} else if(intentName === 'UniversalIntent'){
+		handleUniversalIntent(intent, session, callback);
+	} else{
 		throw new Error ('Invalid Intent');
 	}
 }
