@@ -291,7 +291,7 @@ function handleEventIntent(intent, session, callback){
 			callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
 		} else{
 			console.log("GetItem succeeded: " + JSON.stringify(data, null, 2));
-			var eventDescription = data.Item[date];
+			var eventDescription = data.Item.days[date];
 			if(eventDescription === null){
 				speechOutput = "Sorry, the date you specified is out of range. Please try again. Each season has 28 days."
 			} else{
