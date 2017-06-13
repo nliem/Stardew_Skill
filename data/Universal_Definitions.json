@@ -1,0 +1,106 @@
+[
+	{
+		"category" : "love",
+		"items" : [
+			"Prismatic Shard",
+			"Rabbit's Foot"
+		]
+	},
+	{
+		"category" : "like",
+		"items" : [
+			"Maple Syrup",
+			"Life Elixir",
+			"All Artisan Goods except for Oil which is disliked, and Void Mayonnaise which is hated",
+			"All Cooking except for Fried Egg and Bread which are neutral, and Strange Bun which is hated",
+			"All Flowers except for Poppy which is hated",
+			"All Tree Fruit",
+			"All Gems except for Prismatic Shard which is loved",
+			"All Vegetables except for Wheat and Hops which are neutral"
+		]
+	},
+	{
+		"category" : "neutral",
+		"items" : [
+			"Duck Feather",
+			"Wool",
+			"Truffle",
+			"Sweet Gem Berry",
+			"Fried Egg",
+			"Bread",
+			"Wheat",
+			"Hops",
+			"Clam",
+			"Coral",
+			"Nautilus Shell",
+			"Rainbow Shell"
+		]
+	},
+	{
+		"category" : "dislike",
+		"items" : [
+			"All Building Materials",
+			"All Bombs",
+			"All Crafted Floors and Paths",
+			"All Fences",
+			"All Fertilizer",
+			"All Fish except for Clam which is neutral, and Carp and Snails which are hated",
+			"All Geode Minerals",
+			"All Geodes",
+			"All Seeds",
+			"All Sprinklers",
+			"All Tackle",
+			"Most Ore and Bars",
+			"Cave Carrot",
+			"Driftwood",
+			"Wheat Flour",
+			"Oil",
+			"Void Egg",
+			"Vinegar",
+			"Rice",
+			"Oak Resin",
+			"Pine Tar",
+			"Solar Essence",
+			"Void Essence",
+			"Spring Onion",
+			"Field Snack",
+			"Jack-O-Lantern",
+			"Tea Set",
+			"Stardew Hero Trophy"	
+		]
+	},
+	{
+		"category" : "hate",
+		"items" : [
+			"All Artifacts",
+			"All Bait",
+			"All Crafted Artisan Equipment",
+			"All Crafted Lighting except for Jack-O-Lantern whic his disliked",
+			"All Miscellaneous Crafted Items except for Iron and Gold Bar which are disliked",
+			"All Furniture except for Tea Set which is disliked",
+			"All Monster Loot except for Solar and Void Essence which are disliked",
+			"All Trash except for Driftwood which is disliked",
+			"Sap",
+			"Carp",
+			"Seaweed",
+			"Green and White Algae",
+			"Grass Starter",
+			"Hay",
+			"Poppy",
+			"Copper and Iron Ore",
+			"Sea Urchin",
+			"Red Mushroom",
+			"Snail",
+			"Oil of Garlic",
+			"Strange Bun",
+			"Void Mayonnaise",
+			"Sugar",
+			"Treasure Chest",
+			"Energy Tonic",
+			"Muscle Remedy",
+			"Golden Pumpkin",
+			"Slime Eggs",
+			"Crab Pot"
+		]
+	}
+]
