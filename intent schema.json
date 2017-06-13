@@ -32,6 +32,19 @@
       "intent": "UniversalIntent"
     },
     {
+      "slots":[
+        {
+          "name": "Season",
+          "type": "LIST_OF_SEASONS"
+        },
+        {
+          "name": "Date",
+          "type": "AMAZON.NUMBER"
+        }
+      ],
+      "intent": "EventIntent"
+    },
+    {
       "intent": "AMAZON.HelpIntent"
     }
   ]

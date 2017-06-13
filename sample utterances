@@ -1,0 +1,27 @@
+BirthdayIntent when is {NPC} birthday
+BirthdayIntent what day is {NPC} birthday
+GiftIntent what gifts do {NPC} {Preference}
+GiftIntent what gifts does {NPC} {Preference}
+GiftIntent what are the items that {NPC} {Preference}
+GiftIntent what are the gifts that {NPC} {Preference}
+GiftIntent what items does {NPC} {Preference}
+GiftIntent what items do {NPC} {Preference}
+GiftIntent what items does {NPC} feel {Preference} about
+GiftIntent what are {NPC} {Preference} items
+GiftIntent what are {NPC} {Preference} gifts
+GiftIntent what gifts are {Preference} for {NPC}
+GiftIntent what items are {Preference} for {NPC}
+GiftIntent what gifts are {Preference} by {NPC}
+GiftIntent what items are {Preference} by {NPC}
+UniversalIntent what are the universal {Preference}
+UniversalIntent what gifts are universal {Preference}
+UniversalIntent what items are universal {Preference}
+UniversalIntent what are universal {Preference}
+EventIntent what happens on {Season} {Date}
+EventIntent what's going on on {Season} {Date}
+EventIntent what is going on on {Season} {Date}
+EventIntent what do I need to know about {Season} {Date}
+EventIntent what's important on {Season} {Date}
+EventIntent what is important on {Season} {Date}
+EventIntent what's important about {Season} {Date}
+EventIntent what is important about {Season} {Date}

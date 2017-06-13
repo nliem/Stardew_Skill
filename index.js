@@ -11,6 +11,7 @@ var dynamodb = new AWS.DynamoDB.DocumentClient();
 
 var NPC_Basic_Info = "Stardew_NPC_Basic_Info";
 var Universal_Definitions = "Stardew_Universal_Definitions";
+var Event_Birthday_Calendar = "Stardew_Event_Birthday_Calendar";
 
 /*
 		HELPER FUNCTIONS
@@ -254,6 +255,54 @@ function handleUniversalIntent(intent, session, callback){
 	});
 }
 
+function handleEventIntent(intent, session, callback){
+	const cardTitle = intent.name;
+	const seasonSlot = intent.slots.Season;
+	const dateSlot = intent.slots.Date;
+	let repromptText = '';
+	let speechOutput = '';
+	let sessionAttributes = {};
+	const shouldEndSession = false;
+	var season, rawSeason, date;
+
+	if(seasonSlot && dateSlot){
+		rawSeason = seasonSlot.value;
+		console.log(rawSeason);
+		season = rawSeason.toString().capitalize();
+		console.log(season);
+		date = dateSlot.value.toString();
+	} else{
+		throw new Error('Insufficient information for handleEventIntent');
+	}
+
+	var params = {
+		TableName: Event_Birthday_Calendar,
+		Key: {
+			"season": season
+		}
+	};
+
+	console.log("Attempting to retrieve object with key: "  + season);
+	dynamodb.get(params, function(err, data){
+		if(err || data == null){
+			console.error("Unable to fetch the event for " + season + " " + date + " : " + JSON.stringify(err, null, 2));
+			speechOutput = "I can't recognize the date you're asking about. Please try again.";
+			repromptText = "Sorry, I didn't recognize the date you're asking about. Try again.";
+			callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+		} else{
+			console.log("GetItem succeeded: " + JSON.stringify(data, null, 2));
+			var eventDescription = data.Item[date];
+			if(eventDescription === null){
+				speechOutput = "Sorry, the date you specified is out of range. Please try again. Each season has 28 days."
+			} else{
+				speechOutput = eventDescription;
+			}
+			repromptText = "You can ask me about other dates or about NPC's'.";
+			callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+		}
+	});
+}
+
 /*
 		EVENT HANDLER FUNCTIONS
 */
@@ -282,6 +331,8 @@ function onIntent(intentRequest, session, callback){
 		handleGiftIntent(intent, session, callback);
 	} else if(intentName === 'UniversalIntent'){
 		handleUniversalIntent(intent, session, callback);
+	} else if(intentName === 'EventIntent'){
+		handleEventIntent(intent, session, callback);
 	} else{
 		throw new Error ('Invalid Intent');
 	}
