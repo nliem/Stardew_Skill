@@ -88,7 +88,8 @@ def scrape_pages(full_url):
 	if gifting:
 		json = copy.deepcopy(sample_json)
 		json["gifting"] = True
-		print("this page has gifting")
+		for p in soup.find_all("p", href=True):
+			print(str(p))	
 
 
 #web_scraper(stardew_url + "/Category:Items")
