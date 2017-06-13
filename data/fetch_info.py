@@ -88,7 +88,8 @@ def scrape_pages(full_url):
 	if gifting:
 		json = copy.deepcopy(sample_json)
 		json["gifting"] = True
-		for p in soup.find_all("p", href=True):
+
+		for p in soup.find_all("p", href=False):
 			print(str(p))	
 
 
