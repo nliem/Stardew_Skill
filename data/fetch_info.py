@@ -3,13 +3,14 @@ import copy
 import urllib2
 import re
 import requests
+import json
 
 stardew_url = "http://stardewvalleywiki.com"
 sample_json = 	\
 	{
 		"item" : "",
 		"obtained" : "",
-		"giftable" : False,
+		"giftable" : "false",
 		"preference" : {
 			"Abigail" : "",
 			"Alex" : "",
@@ -68,10 +69,10 @@ def web_scraper(full_url):
 
 	for p in page_urls:
 		#print(p)
-		json = scrape_pages(p)
-		if json is not None:
-			print(str(json) +",")
-			json_objects.append(json)
+		json_obj = scrape_pages(p)
+		if json_obj is not None:
+			print(json.dumps(json_obj) +",")
+			json_objects.append(json.dumps(json_obj))
 
 	for s in sub_categories_urls:
 		web_scraper(s)
@@ -99,13 +100,15 @@ def get_obtained(list_content):
 	output = ""
 	for i in range(2,len(list_content)):
 		test = list_content[i]
-		##print(str(test) + "1")
+		#print("1"+ str(test) + "2")
 
 		soup = BeautifulSoup(str(test), 'html.parser')
-		if(str(test)  == "</div>" or "mw-headline" in str(test) or "h2" in str(test) or "wikitable" in str(test)):
+		if(test=="\n" or "mw-headline" in str(test) or "h2" in str(test) or "wikitable" in str(test)):
 			break
 		else:
-			output = output + str(list_content[i])
+			modified = re.sub('\n', "", str(list_content[i]))
+			modified = re.sub('"',"" , str(modified))
+			output = output + modified
 	return remove_tags(output)
 
 
@@ -136,13 +139,15 @@ def scrape_pages(full_url):
 
 		gifting = soup.find(id="Gifting")
 		if gifting:
-			json["giftable"] = True
+			json["giftable"] = "true"
 			##print(obtained)
 			table = soup.find("table", id="roundedborder")
 			##print(table)
 			##print "wtf?"
 			table = remove_strange_charactes(remove_tags(str(table)))
 			process_villager_table(table,json)
+		else:
+			json["giftable"] = "false"
 		return json
 
 
@@ -161,12 +166,13 @@ def process_villager_table(table, json):
 			reaction_insert_to = item
 			##print item
 		else:
-			json['preference'][item] = reaction_insert_to
+			if item in json['preference']:
+				json['preference'][item] = reaction_insert_to
 	
 
 web_scraper(stardew_url + "/Category:Items")
 
-#scrape_pages("http://stardewvalleywiki.com/Void_Mayonnaise")
+#scrape_pages("http://stardewvalleywiki.com/Tub_o%27_Flowers")
 
 
 
