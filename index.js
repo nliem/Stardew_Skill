@@ -268,7 +268,7 @@ function handleEventIntent(intent, session, callback){
 	if(seasonSlot && dateSlot){
 		rawSeason = seasonSlot.value;
 		console.log(rawSeason);
-		season = rawSeason.toString().capitalize();
+		season = rawSeason.charAt(0).toUpperCase() + rawSeason.slice(1);
 		console.log(season);
 		date = dateSlot.value.toString();
 	} else{
