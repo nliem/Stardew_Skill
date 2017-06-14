@@ -18,6 +18,8 @@ UniversalIntent what gifts are universal {Preference}
 UniversalIntent what items are universal {Preference}
 UniversalIntent what are universal {Preference}
 EventIntent what happens on {Season} {Date}
+EventIntent what is happening on {Season} {Date}
+EventIntent what's happening on {Season} {Date}
 EventIntent what's going on on {Season} {Date}
 EventIntent what is going on on {Season} {Date}
 EventIntent what do I need to know about {Season} {Date}
