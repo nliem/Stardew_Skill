@@ -112,6 +112,13 @@ def get_obtained(list_content):
 	return remove_tags(output)
 
 
+def find_gift_table(list_tables):
+	for table in list_tables:
+		#print(table)
+		if "Villager Reactions" in str(table):
+			return str(table)
+
+
 def scrape_pages(full_url):
 	response = requests.get(full_url)
 	page = response.content
@@ -141,7 +148,8 @@ def scrape_pages(full_url):
 		if gifting:
 			json["giftable"] = "true"
 			##print(obtained)
-			table = soup.find("table", id="roundedborder")
+
+			table = find_gift_table(soup.find_all("table", id="roundedborder"))
 			##print(table)
 			##print "wtf?"
 			table = remove_strange_charactes(remove_tags(str(table)))
@@ -168,11 +176,11 @@ def process_villager_table(table, json):
 		else:
 			if item in json['preference']:
 				json['preference'][item] = reaction_insert_to
+	#print json
 	
-
 web_scraper(stardew_url + "/Category:Items")
 
-#scrape_pages("http://stardewvalleywiki.com/Tub_o%27_Flowers")
+#scrape_pages("http://stardewvalleywiki.com/Sunflower_Seeds")
 
 
 
