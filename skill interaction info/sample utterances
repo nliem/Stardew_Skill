@@ -27,3 +27,16 @@ EventIntent what's important on {Season} {Date}
 EventIntent what is important on {Season} {Date}
 EventIntent what's important about {Season} {Date}
 EventIntent what is important about {Season} {Date}
+NPCItemIntent does {NPC} like {Item}
+NPCItemIntent does {NPC} like {Item}s
+NPCItemIntent does {NPC} like the {Item}
+NPCItemIntent how does {NPC} feel about {Item}
+NPCItemIntent how does {NPC} feel about {Item}s
+NPCItemIntent how does {NPC} feel about the {Item}
+NPCItemIntent how does {NPC} like {Item}
+NPCItemIntent how does {NPC} like {Item}s
+NPCItemIntent should I give {NPC} {Item}
+NPCItemIntent should I give {NPC} the {Item}
+NPCItemIntent should I give {NPC} {Item}s
+NPCItemIntent what does {NPC} think of {Item}
+NPCItemIntent what does {NPC} think of {Item}s
