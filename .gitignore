@@ -1,0 +1,5 @@
+#Ignore config files with AWS IAM keys#
+config.json
+
+#Ignore the zip being uploaded to AWS#
+*.zip

@@ -8080,7 +8080,7 @@
     "giftable": "true"
   },
   {
-    "obtained": "Note: This article is about the fruit seed. For the artifact see the Ancient Seed page.",
+    "obtained": "Ancient Seeds can be crafted from 1 Ancient Seed Artifact. They can also be obtained by placing an Ancient Fruit in a Seed Maker or purchased at the Travelling Cart if available.",
     "item": "Ancient Seeds",
     "preference": {
       "Willy": "Dislike",
@@ -8120,7 +8120,7 @@
     "giftable": "true"
   },
   {
-    "obtained": "Artichoke Seeds are a type of seed. Mature plants yield Artichokes.They can be purchased at Pierre's General Store from second year onward and occasionally from the Travelling Cart. They can also be obtained by using the Seed Maker, as well as having a chance of being planted when using Mixed Seeds. When shipped, they sell for 15g.",
+    "obtained": "Artichoke Seeds ",
     "item": "Artichoke Seeds",
     "preference": {
       "Willy": "Dislike",
